@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "speed-up-master",
+  "private_key_id": "e06d62455737c8be44f58b28002bc8cc37ab30a3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCnHHPcIDzy4QAY\no6LGtCq2FhkrVs4UhjNpy1n+IqU9JeH2GHZIe5uJpsY9YzE1YY1GB3xxs7oBRApU\nc5uj3NKzOg/5gAQQ0+UwUFGqur8S0LlaKYR3uBzC/NukD5MyADTSLefeaPRM4W/f\n5pzdqXWL7OemUp3HgPCVdfkZFeWTFu8//Bi2kp1RCLRqqfbmkdf1rrbdGHaf4is/\nG2y9MbiAMx0oLv/gvnkgEP35RxankXRMzSy6iiwZXUf6cC2HinRV5os8FgaBDBgn\nXGnoBF34DHOysrL8PJlm7FdU5SxjBpVnX4H/8rNGbBfiNHgj2kZUzF4jFYU4mu7H\naTRea3MHAgMBAAECggEAAZih+q5MJr3DdHjLqz45Ujfv0Zwop8WIZDBPEcBe97CO\n8fzV1Gdp2uy+5AM4ixv9b3fO1n8y/aQavSfFitEnKhMZ5/YzE74SaF28Cfdyr8lS\nm+vdmg8mJy6nInALpeSenItXtaYm/z0ABpF7WhquRsHijJIpc6hlo+fWk0jEQp1n\nfcxBJdJ6BmKjHzBG2lLUF9rD8vF1Bx0pylVvLrCzuQQTewEEhCn80DVxGG0QQn1e\nFBJjtmKfxIYZEfxLnu+msq6QTUFxydxqoknV4IyUvyCMPWhc/F4LcwjDtSWd1Spu\nvi1Fo8wmwnZ5FtGJ2xESz+Auyqc+Q/LHZVLh6jEsQQKBgQDnOJXun+kstXY30DFF\noOBtKK06NvjBiTCuFLhBlOgcBizl/lthJHOQ9oIWadFfkTYfN8t5fQFolGEPr43R\nOt26xc0Ss3l1iosZoXDkNdiHT6mx6RH26U/ZTioIs7RKzzt1q9j2JjLipXw43mFf\nfTxCzUVhGZIfmrUT2Y48FlozsQKBgQC5BQygpsOsx3eyp828eisc0mFCsqKU9RTm\n4Rge1ouxCg4w/xezhHhPIukoOlWJd9aaA6O7GjovAv7W7edtyhwbktroqJz1B5iC\nu7V5RTROMHG85gHnH5byXV/bV9treyXyf9A7QoZVsZvPw8W7+0xGNVTS+5hJUjmM\nXpxNuH3YNwKBgQDMC0l0fTWeOLyMYHM6yM+ERQMpfl1jHRgSZ0J6zVdPc7uncyFc\nxngdkwwVj2gu98xVHD25hjD6AwbserWh0FrfebKRMESdD5fVFHy1Rzc/oXNVByLN\nS/MlBy9c4ojWA66rFu2tuuPo0rSe0tAHHlNReCgjmhczQKlPTQuRxv/u4QKBgE96\nzM7idKJvWYskrKuvq3+JHIDjbhYhJiZ8QblVntKhqDECFDNoz6nnLFO8o2wXT9f/\ngkFo5d+2ILVBo641KVfrASD69doItkpKyo1a3jpMcz+bauvXVSeuVvRJzJdiYo3G\nvDQIwt5jGrTou7OiI0TxugucSvIMYW5cYja870qHAoGBAIJlPFCoV7tDKo3ZIv3c\nF2l/vyA3sndEaWPtZn88YXadSTpPbYtDU8B6A2gbHGQAx0s/igIr7+NC+UQrPM8+\nR2fK5hRG1mnoRovPExscf0MdeP+8BZN+lh2t7xbKuGqEEpXx2gvOCh6L/RTqME/W\nA6Y3WytigDoz/tkf4UT2Jeu+\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-rvder@speed-up-master.iam.gserviceaccount.com",
+  "client_id": "103526285418135111499",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-rvder%40speed-up-master.iam.gserviceaccount.com"
+}
