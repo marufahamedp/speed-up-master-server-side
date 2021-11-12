@@ -9,7 +9,7 @@ const { MongoClient } = require('mongodb');
 const port = process.env.PORT || 5000;
 
 
-const serviceAccount = require('./hospital-house-firebase-adminsdk.json');
+const serviceAccount = require('./speed-up-master-firebase.json');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
