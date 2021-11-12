@@ -64,7 +64,6 @@ async function run() {
     app.get('/users', async (req, res) => {
       const email = req.query.email;
       const query = { email: email }
-      console.log(query);
       const cursor = usersCollection.find(query);
       const users = await cursor.toArray()
       res.send(users)
@@ -75,8 +74,6 @@ async function run() {
     app.post('/posts', async (req, res) => {
       const posts = req.body;
       const result = await usersPpostCollection.insertOne(posts);
-      console.log('hitting the post', req.body);
-      console.log('got user', result);
       res.json(result);
     })
 
@@ -92,8 +89,6 @@ async function run() {
     app.post('/teammembers', async (req, res) => {
       const teammember = req.body;
       const result = await teamCollection.insertOne(teammember);
-      console.log('hitting the teammember', req.body);
-      console.log('got user', result);
       res.json(result);
     })
 
@@ -109,8 +104,6 @@ async function run() {
     app.post('/cars', async (req, res) => {
       const car = req.body;
       const result = await carsCollection.insertOne(car);
-      console.log('hitting the car', req.body);
-      console.log('got user', result);
       res.json(result);
     })
 
@@ -130,16 +123,6 @@ async function run() {
       res.json(car);
     })
 
-    // get orders by email
-    // app.get('/orders', async (req, res) => {
-    //   const email = req.query.email;
-    //   console.log(req.query);
-    //   const query = { email: email}
-    //   const cursor2 = ordersCollection.find(query);
-    //   const order2 = await cursor.toArray();
-    //   res.json(order2);
-    // })
-
 
   
     // get orders
@@ -148,16 +131,7 @@ async function run() {
       const orders = await cursor.toArray();
       res.send(orders);
     })
-    // })
-    // app.get('/orders', async (req, res) => {
-    //   const email = req.query.email;
-    //   console.log(req.query);
-    //   const query = { email: email }
-    //       const cursor = ordersCollection.find(query);
-    //   const order = await cursor.toArray();
-    //   res.json(order);
-     
-    // })
+
 
     // get single order
 
@@ -175,10 +149,6 @@ async function run() {
       res.json(result);
     })
 
-    app.get('/cars', async (req, res) => {
-      console.log(req.body);
-      res.send('okay')
-    })
     // update Order
     app.put('/orders/:id', async (req, res) => {
       const id = req.params.id;
@@ -191,7 +161,6 @@ async function run() {
         },
       };
       const result = await ordersCollection.updateOne(filter, updateDoc, options)
-      console.log('updating order ', id);
       res.json(result);
     })
 
@@ -206,8 +175,6 @@ async function run() {
       app.post('/reviews', async (req, res) => {
         const review = req.body;
         const result = await reviewsCollection.insertOne(review);
-        console.log('hitting the review', req.body);
-        console.log('got user', result);
         res.json(result);
       })
         // get single reviews
@@ -240,7 +207,6 @@ async function run() {
      
       const user = await usersCollection.findOne(query);
       let isAdmin = false;
-      console.log(user);
       if (user?.role) {
         isAdmin = true;
       }
@@ -250,7 +216,6 @@ async function run() {
     app.post('/users', verifyToken,  async (req, res) => {
       const user = req.body;
       const result = await usersCollection.insertOne(user);
-      console.log(result);
       res.json(result);
     });
 
@@ -301,7 +266,7 @@ async function run() {
 run().catch(console.dir);
 
 app.get('/', (req, res) => {
-  res.send('Hello assignment12')
+  res.send('Hello Speedup')
 })
 
 app.listen(port, () => {
