@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "marufmanagementaist",
+  "private_key_id": "4e2fdbe97fa4fa7374d785cf3f89790ed0fe74f4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCWG8AwWTyejXI0\nOGO6d1oApH9uIp4COFmqqB7DKZ3SUhTX/4rGk0NTdhqudfVMAc0eVWDb5RHMIJOO\nSks2kwZnq8UpnrOeSpAL8QCV5Z9uTK58SA2tnK/jlsQh8mA2I8kLLH7l2MQBF4CB\nKysfj5esnB9QajshvBN68zctvBjSCR38PlTJtwgkF6KGPMkmGWlSkFXX+qk0cQjL\n0euQ3jjpIbYMljjp/L9pRqM+w0N4FeIEcHLHlLK9QIqTnrFz1yEobcbGimaioyy3\nhG/jD7Q3uiyuFKc1gsrLho4iM/3tcUzRy0EQZEsblsU7PTnfERhMDZyA6LIECoew\nXzvKanVhAgMBAAECggEAEaZUrDqp4TNcyh1r7dO1GPM+lTAWfR4BaQqt3KEK5gfH\nB04MProNBgYShWXoQEDL90pEV8aw7Nv9uD2DEiPVHSEkzyEnxIUcN9M6uuVOIDV9\npK5XhreFijtCzNeyDrDu0CoHXQuQ9wHmQbSA3wv5YmR/CBZdj+Nh36iJBI8j1KTr\nR7+o1O0Ynt6bgcacxTeO74Ch/xZvp1WY/dqWI5tkyG4reti4qx74AzuRe3Wm4VIS\n78xhVeISbzu+OCmVBR3UXydk98kIItf4o+2IzBHE/fiMnqk/jgTI3YsRzx0oj9Yq\n/jSVDDZCOYBPQNOWyfSAqvTgot8P87BqwS9eyh38GwKBgQDPshLSzC9LPGP/lRBu\ncmu55kni0q9uhyXRGIMsXeBZxua3T1l3U/h6ZSScRaAnm9cOa79gApvo1qFY82qm\nr5eqy7EuAKbNUhlyuZEd+xWi46SPQrA/wdtAUxfU77uoGZECEoNAxoUQUuIUSZ8s\n6XaSrbg2UfavVQ4e5/XlrXksCwKBgQC5BQKZJ246S6nVrky+aqWAi5b9UgKhzH9F\nQDshN/UMpcixk3RaHfixZoE/8RZoKmrWK3ntNCPOPLnu6hmodn4DcZz4p9Wo1U3z\nSqAoqeUAzzDxM/BN2ekJGxOUUhTbxCNZkXdYNItsvC+JQZCY+zsC52tpMVd/ShMA\neYoOESJbwwKBgD0Ka+fSJLAq7oTGDY84R5raKKrmGrMUOzQJzTtz16TrBRGo23Vr\nk2J9aVYYTGp3ravKVPNlsOasdb0LxTN59cw3kzoe7Ob5EwuZqCG0knZOCyYjhmMm\nmUZ9ZUqqrm9IHEsMn9Cgx6i1g0ZNIN/1OWkAb1xfmG2NRNomeClpY2xjAoGATbZc\nBAY610OGn1jppSVYRKjdD6PNtTYW0viKnYZKaDiOFoAv49Yo6iJ68WeLGM+QNkrm\nmIpI68w38LDlfAvhHAMxgoPES3jkl+blZI8PwApGrVk6ewinSArWa3sahcBZdLqT\n3Tmcwlw8vzMJ0Cfd/ndDd1ihPrbXSmDCauwpeU8CgYAoadp9JKJUzTsNyxOLzMWG\n1vlV7g3fXexFbq9uSNIFf/i4x+Ar2Iwx7ZUDK+ZhtpqjTqTC14oFzxuXjGrL+MIi\npCe6rbLt/oiCZKu65+mmHK6EnzJa1EzrxJY/wpgze0uaNcbAbgpNO71zSCz7k7dR\n7aOasS0i49sSFy9SKN3cSA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-g1dja@marufmanagementaist.iam.gserviceaccount.com",
+  "client_id": "104659131580104495472",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-g1dja%40marufmanagementaist.iam.gserviceaccount.com"
+}

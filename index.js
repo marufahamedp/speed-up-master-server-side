@@ -9,7 +9,8 @@ const { MongoClient } = require('mongodb');
 const port = process.env.PORT || 5000;
 
 
-const serviceAccount = require('./speed-up-master-firebase.json');
+
+const serviceAccount = require('./marufmanagementaist-firebase-admin.json');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
@@ -41,12 +42,105 @@ async function run() {
   try {
     await client.connect();
     const database = client.db("Speed-Up");
-    const usersPpostCollection = database.collection("posts");
     const usersCollection = database.collection('users');
-    const teamCollection = database.collection('teammembers');
-    const carsCollection = database.collection('cars');
-    const ordersCollection = database.collection('orders');
-    const reviewsCollection = database.collection('reviews');
+    const studentsCollection = database.collection('students');
+
+    //get team students
+    app.get('/students', async (req, res) => {
+      const cursor = studentsCollection.find({});
+      const student = await cursor.toArray()
+      res.send(student)
+    });
+
+    // post team members
+    app.post('/students', async (req, res) => {
+      const student = req.body;
+      const result = await studentsCollection.insertOne(student);
+      console.log('hitting the teammember', req.body);
+      console.log('got user', result);
+      res.json(result);
+    })
+    // get single students
+
+    // app.get('/students/:id', async (req, res) => {
+    //   const id = req.params.id;
+    //   const query = { _id: ObjectID(id) };
+    //   const student = await studentsCollection.findOne(query);
+    //   res.json(student);
+    // })
+
+    app.get('/students/id/:id', async (req, res) => {
+      const cursor = studentsCollection.find({});
+      const student = await cursor.toArray()
+      const search = req.params.id;
+      if(search){
+        const result = student.filter(students => students._id == search);
+        res.json(result)
+      }
+     else{
+      res.json(student);
+     }
+    })
+
+    app.get('/students/:key', async (req, res) => {
+      const cursor = studentsCollection.find({});
+      const student = await cursor.toArray()
+      const search = req.params.key;
+      if(search){
+        const result = student.filter(students => students.firstName.toLocaleLowerCase().includes(search));
+        res.json(result)
+      }
+     else{
+      res.json(student);
+     }
+    })
+    app.get('/students/lastname/:key2', async (req, res) => {
+      const cursor = studentsCollection.find({});
+      const student = await cursor.toArray()
+      const search = req.params.key2;
+      if(search){
+        const result = student.filter(students => students.registrationNo.toLocaleLowerCase().includes(search));
+        res.json(result)
+      }
+     else{
+      res.json(student);
+     }
+    })
+   
+    // delete single students
+    app.delete('/students/:id', async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectID(id) };
+      const student = await studentsCollection.deleteOne(query);
+      res.send('student');
+    })
+
+    app.put('/students/:id', verifyToken, async (req, res) => {
+      const id = req.params.id;
+      const student = req.body;
+      const filter = { _id: ObjectID(id) };
+      const options = { upsert: true };
+      const updateDoc = { $set: student };
+      const result = await studentsCollection.updateOne(filter, updateDoc, options);
+      res.json(result);
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //get api
     app.get('/posts', async (req, res) => {
       const cursor = usersPpostCollection.find({});
@@ -71,6 +165,25 @@ async function run() {
     });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // post api
     app.post('/posts', async (req, res) => {
       const posts = req.body;
@@ -81,37 +194,6 @@ async function run() {
     })
 
 
-    //get team members
-    app.get('/teammembers', async (req, res) => {
-      const cursor = teamCollection.find({});
-      const teammember = await cursor.toArray()
-      res.send(teammember)
-    });
-
-    // post team members
-    app.post('/teammembers', async (req, res) => {
-      const teammember = req.body;
-      const result = await teamCollection.insertOne(teammember);
-      console.log('hitting the teammember', req.body);
-      console.log('got user', result);
-      res.json(result);
-    })
-    // get single teammembers
-
-    app.get('/teammembers/:id', async (req, res) => {
-      const id = req.params.id;
-      const query = { _id: ObjectID(id) };
-      const review = await teamCollection.findOne(query);
-      res.json(review);
-    })
-
-    // delete single teammembers
-    app.delete('/teammembers/:id', async (req, res) => {
-      const id = req.params.id;
-      const query = { _id: ObjectID(id) };
-      const review = await teamCollection.deleteOne(query);
-      res.json(review);
-    })
 
     //get cars
     app.get('/cars', async (req, res) => {
@@ -314,7 +396,7 @@ async function run() {
 run().catch(console.dir);
 
 app.get('/', (req, res) => {
-  res.send('Hello assignment12')
+  res.send('Hello ManageAist')
 })
 
 app.listen(port, () => {
