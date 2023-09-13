@@ -22,21 +22,7 @@ app.use(express.json());
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.jcoi8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
-async function verifyToken(req, res, next) {
-  if (req.headers?.authorization?.startsWith('Bearer ')) {
-    const token = req.headers.authorization.split(' ')[1];
 
-    try {
-      const decodedUser = await admin.auth().verifyIdToken(token);
-      req.decodedEmail = decodedUser.email;
-    }
-    catch {
-
-    }
-
-  }
-  next();
-}
 
 async function run() {
   try {
@@ -115,7 +101,7 @@ async function run() {
       res.send('student');
     })
 
-    app.put('/students/:id', verifyToken, async (req, res) => {
+    app.put('/students/:id', async (req, res) => {
       const id = req.params.id;
       const student = req.body;
       const filter = { _id: ObjectID(id) };
@@ -342,14 +328,14 @@ async function run() {
       res.json({ admin: isAdmin });
     })
 
-    app.post('/users', verifyToken, async (req, res) => {
+    app.post('/users', async (req, res) => {
       const user = req.body;
       const result = await usersCollection.insertOne(user);
       console.log(result);
       res.json(result);
     });
 
-    app.put('/users', verifyToken, async (req, res) => {
+    app.put('/users', async (req, res) => {
       const user = req.body;
       const filter = { email: user.email };
       const options = { upsert: true };
@@ -369,7 +355,7 @@ async function run() {
 
     //j kew admin banaite parbe
 
-    app.put('/users/admin', verifyToken, async (req, res) => {
+    app.put('/users/admin', async (req, res) => {
       const user = req.body;
       const requester = req.decodedEmail;
       if (requester) {
